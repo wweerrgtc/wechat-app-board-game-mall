@@ -1,0 +1,77 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='bg-sear'>
+    <view class="scrolltop">
+      <view class='section' bindtap='toSearchPage'>
+        <image src='../../images/icon/search.png' class='search-img'></image>
+        <text class='placeholder'>搜索</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='content'>
+    <!-- swiper -->
+    <swiper autoplay='{{autoplay}}' indicator-color='#d1e5fb' interval='2000' duration='1000' indicator-active-color='#1b7dec' circular='true' class='pic-swiper' indicator-dots >
+      <block wx:for='{{indexImgs}}' wx:key="gid">
+        <swiper-item class="banner-item">
+          <view class='img-box'>
+            <image src='{{item.image}}' id="{{item.gid}}" bindtap="toProduct" class='banner'></image>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+    <!-- end swiper -->
+
+    <view class='cat-item'>
+      <view class='item' bindtap='recommended'>
+        <image src='../../images/icon/newProd.png'></image>
+        <text>为你推荐</text>
+      </view>
+      <view class='item' bindtap='toMessageList' data-sts="2">
+        <image wx:if="{{newMsg}}" src='../../images/icon/newMessage.png'></image>
+        <image wx:else="" src='../../images/icon/timePrice.png'></image>
+        <text>通知列表</text>
+      </view>
+      <view class='item' bindtap='toShare' data-sts="3">
+        <image src='../../images/icon/getCoupon.png'></image>
+        <text>共享桌游</text>
+      </view>
+      <view class='item' bindtap='dailyCheck'>
+        <image src='../../images/icon/newprods.png'></image>
+        <text>每日签到</text>
+      </view>
+    </view>
+
+
+  <!-- 排行榜区域 -->
+  <view class="topList">
+    <!-- 头部 -->
+
+    <view class="navheader" bindtap='toTopList'>
+    <view>排行榜</view>
+    <view>最受欢迎的桌游</view>
+    </view>
+    <!-- 内容区 -->
+    <swiper class="toListSwiper" next-margin="100rpx">
+      <swiper-item>
+        <view class="swiperItem" wx:for="{{topList1}}" wx:key="gid">
+          <view class="topListItem" id="{{item.gid}}" bindtap="toProduct">
+            <image src="{{item.image}}"></image>
+            <text class="count">{{item.gid}}</text>
+            <text class="itemName">{{item.gname}}</text>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="swiperItem" wx:for="{{topList2}}" wx:key="gid">
+          <view class="topListItem" id="{{item.gid}}" bindtap="toProduct">
+            <image src="{{item.image}}"></image>
+            <text class="count">{{item.gid}}</text>
+            <text class="itemName">{{item.gname}}</text>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+  </view>
+</view>

@@ -1,0 +1,47 @@
+swiper{
+    height: 1200rpx;
+}
+.topList {
+    margin: 20rpx;
+    /* border: 1rpx red solid; */
+  }
+  .navheader{
+    height: 100rpx;
+    font-size: 14px;
+    line-height: 24px;
+    width: 100%;
+    /* border: 1rpx red solid; */
+  }
+  .swiperItem{
+   width: 95%;
+   background-color: #FdFEFE;
+  }
+  
+  .swiperItem .title {
+    font-size: 30rpx;
+    line-height: 80rpx;
+  }
+  
+  .swiperItem image {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 6rpx;
+  }
+  
+  .topListItem {
+    display: flex;
+    margin: 20rpx;
+  }
+  
+  .topListItem .count {
+    width: 50rpx;
+    height: 100rpx;
+    text-align: center;
+    line-height: 100rpx;
+  }
+  
+  .topListItem .itemName {
+    height: 100rpx;
+    line-height: 100rpx;
+    font-size: small;
+  }

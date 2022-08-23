@@ -1,0 +1,12 @@
+<!--pages/shopping/shopping.wxml-->
+<scroll-view class="productlist">
+    <view class="product" wx:for="{{productList}}" wx:key="gid">
+        <image src="{{item.image}}" mode="scaleToFill"></image>
+        <view class="info">
+            <text class="name">{{item.gname}}</text>
+            <text class="price">原价: {{item.price}}元</text>
+            <text class="price">租金: {{item.rent}}元/月</text>
+        </view>
+        
+    </view>
+</scroll-view>

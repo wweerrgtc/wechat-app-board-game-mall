@@ -1,0 +1,12 @@
+<view class='my-menu' wx:for="{{productList}}" wx:key="orderId" bindtap="return" id="{{item.orderId}}">
+    <view class='memu-item'>
+        <view class="i-name">
+            <image src='{{item.goodsinfoList.image}}'></image>
+            <view class="gnameandtime">
+            <text>{{item.goodsinfoList.gname}}</text>
+            <text class="time">{{item.createTime}}</text>
+        </view>
+        </view>
+            <image class="returnbtn" src='{{item.status==1?"//tvax2.sinaimg.cn/thumbnail/005WJM5Tly1h25m3oaj71j301c01cmwz.jpg":"//tvax3.sinaimg.cn/thumbnail/005WJM5Tly1h25m3odnk4j301c01cweb.jpg"}}'></image>
+    </view>
+</view>

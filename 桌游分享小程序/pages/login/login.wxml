@@ -1,0 +1,13 @@
+<view class="form-common">
+        <view class="formc-cnt">
+            <text>用户名: </text>
+            <input bindinput="textinput" id="username" type="text" />
+        </view>
+        <view class="formc-cnt">
+            <text>密码：</text>
+            <input bindinput="textinput" id="password" type="text" password="true" />
+        </view>
+        <view>
+            <button type="primary" bindtap="login" hover-class="btnhover" formType="submit">登录</button>
+        </view>
+</view>

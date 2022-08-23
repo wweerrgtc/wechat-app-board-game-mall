@@ -1,0 +1,49 @@
+<view class="prodImg">
+    <image src='{{product.image}}' class="image"></image>
+</view>
+<view class='prod-info'>
+    <view class="tit-wrap">
+        <view class="prod-tit">{{product.gname}}</view>
+        <view class="col" bindtap='addOrRemoveWishList'>
+            <image wx-if="{{!isCollection}}" src="../../images/icon/prod-col.png"></image>
+            <image wx-if="{{isCollection}}" src="../../images/icon/prod-col-red.png"></image>
+            心愿单
+        </view>
+    </view>
+    <view class="sales-p">来自用户{{product.username}}的共享</view>
+    <view class="prod-price">
+        <text class="price"><text class="price-num">￥{{product.rent}}</text>.00<text class="price-word">/月</text></text>
+        <text class="price"><text class="price-word">押金</text><text class="price-num">￥{{product.price}}</text>.00</text>
+    </view>
+</view>
+
+<view class='cmt-wrap'>
+    <view class="cmt-tit" bindtap='showComment'>
+        <view class="cmt-t">
+            物主留言:
+            <text class="{{fold == true?'fold':'cmt-nofold'}}">{{product.description}}</text>
+        </view>
+        <view class="cmt-count" bindtap="showDescription">
+           {{fold == true?'查看详情':'收起详情'}}
+            <text class="{{fold == true?'cmt-more-nofold':'cmt-more-fold'}}"></text>
+        </view>
+    </view>
+</view>
+
+<view class="cart-footer">
+    <view class="btn icon" bindtap='toPreviousPage'>
+      <image src="../../images/tabbar/zhuye.png"></image>
+      返回主页
+    </view>
+    <view class="btn icon" bindtap='toWishList'>
+      <image class="wishListImage" src="../../images/icon/prod-col.png"></image>
+      查看心愿单
+      <view class='badge badge-1' wx:if="{{totalCartNum>0}}">{{totalCartNum}}</view>
+    </view>
+    <view class="btn cart" bindtap='addOrRemoveWishList'>
+      <text>{{isCollection == false?'加入心愿单':'移除心愿单'}}</text>
+    </view>
+    <view class="btn buy" bindtap='buyNow'>
+      <text>立即预定</text>
+    </view>
+  </view>

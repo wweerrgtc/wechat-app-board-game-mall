@@ -1,0 +1,14 @@
+.header{
+    font-size: 60rpx;
+    background-color: #fff;
+    color: #1a1a1a;
+    border-radius: 5rpx;
+    margin: 10rpx;
+    height: 200rpx;
+    line-height: 200rpx;
+    text-align: center;
+}
+
+.recharge{
+    margin: 100% auto;
+}

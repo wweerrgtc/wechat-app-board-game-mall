@@ -1,0 +1,65 @@
+/* pages/orderList/orderList.wxss */
+.my-menu {
+    /* width: 100%; */
+    background-color: #fff;
+    margin-top: 20rpx;
+}
+
+.my-menu .memu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 200rpx;
+    border-bottom: 2rpx solid #f7f7f7;
+    padding: 0 30rpx;
+}
+
+.my-menu .memu-item:nth-child(1) {
+    border-top: 2rpx solid #f7f7f7;
+}
+
+.my-menu .memu-item:last-child {
+    border-bottom: none;
+}
+
+.my-menu .memu-item text {
+    font-size: 28rpx;
+}
+
+.my-menu .memu-item .time {
+    margin-top: 20rpx;
+    font-size: 20rpx;
+}
+.gnameandtime{
+    display: flex;
+    flex-direction: column;
+}
+
+.my-menu .memu-item image {
+    width: 150rpx;
+    height: 150rpx;
+    margin-right: 20rpx;
+
+}
+.my-menu .memu-item .returnbtn {
+    width: 50rpx;
+    height: 50rpx;
+    margin-right: 20rpx;
+
+}
+
+.my-menu .memu-item .i-name {
+    display: flex;
+    align-items: center;
+}
+
+/* .orderFinishStatus {
+    width: 50rpx;
+    height: 50rpx;
+    background-image: url("//tvax2.sinaimg.cn/thumbnail/005WJM5Tly1h25m3oaj71j301c01cmwz.jpg");
+  }
+  .orderRentingStatus {
+      width: 50rpx;
+      height: 50rpx;
+      background-image: url("//tvax3.sinaimg.cn/thumbnail/005WJM5Tly1h25m3odnk4j301c01cweb.jpg");
+    } */

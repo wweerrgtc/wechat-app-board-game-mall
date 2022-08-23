@@ -1,0 +1,127 @@
+
+
+.search-bar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: #777;
+  background: #fff;
+  box-shadow: 0 2rpx 6rpx rgba(0, 0, 0, 0.07);
+  z-index: 3;
+}
+
+.search-bar .search-box {
+  position: relative;
+  height: 60rpx;
+  background: #f7f7f7;
+  z-index: 999;
+  width: 80%;
+  margin-left: 70rpx;
+  border-radius: 50rpx;
+  margin: 20rpx 0 20rpx 20rpx;
+}
+
+.sear-input {
+  height: 60rpx;
+  border-radius: 50rpx;
+  border: 0;
+  margin: 0 30rpx 0 64rpx;
+  line-height: 48rpx;
+  vertical-align: top;
+  background: #f7f7f7;
+  font-size: 28rpx;
+}
+
+.search-bar .search-hint {
+  font-size: 28rpx;
+  position: absolute;
+  right: 30rpx;
+  top: 31rpx;
+  color: #eb2444;
+}
+
+.search-bar .search-box .search-img {
+  width: 32rpx;
+  height: 32rpx;
+  position: absolute;
+  left: 20rpx;
+  top: 14rpx;
+  display: block;
+}
+
+
+.search-display {
+  background: #fff;
+  padding: 20rpx;
+  margin-top: 100rpx;
+}
+
+.search-display .title-text {
+  padding: 30rpx 0;
+  font-size: 30rpx;
+  color: #666;
+}
+
+.hot-search .hot-search-tags {
+  overflow: hidden;
+  font-size: 26rpx;
+  text-align: center;
+  padding-bottom: 30rpx;
+}
+
+.hot-search .hot-search-tags .tags {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  float: left;
+  border-radius: 50rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  padding: 10rpx 30rpx;
+}
+
+
+.rightcontent {
+  margin-left: 80rpx;
+  height: 80%;
+  width: 700rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.scrollItem {
+  width: 40%;
+  height: 260rpx;
+  margin: 20rpx;
+  position:relative
+}
+
+.scrollItem image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+
+.scrollItem text {
+  width: 200rpx;
+  font-size: 24rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-align: center;
+}
+
+.main {
+  position: fixed;
+  display: flex;
+  overflow: hidden;
+  margin-top: 100rpx;
+  height: calc(100% - 100rpx);
+}

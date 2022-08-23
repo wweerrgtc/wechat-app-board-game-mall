@@ -1,0 +1,167 @@
+/* pages/category/category.wxss */
+
+page {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  /* height: 100%; */
+}
+
+.main {
+  position: fixed;
+  display: flex;
+  overflow: hidden;
+  margin-top: 100rpx;
+  height: calc(100% - 100rpx);
+}
+
+/* 搜索栏 */
+
+.search-bar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: #777;
+  background: #fff;
+  box-shadow: 0 2rpx 6rpx rgba(0, 0, 0, 0.07);
+  z-index: 3;
+  padding: 20rpx 0;
+}
+
+.search-bar .arrow {
+  width: 20rpx;
+  height: 20rpx;
+  border-bottom: 2rpx solid #777;
+  border-left: 2rpx solid #777;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 30rpx;
+  top: 41rpx;
+}
+
+.search-bar .search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60rpx;
+  background: #f7f7f7;
+  z-index: 999;
+  width: 92%;
+  border-radius: 50rpx;
+  text-align: center;
+  margin: auto;
+}
+
+.sear-input {
+  font-size: 28rpx;
+}
+
+.search-bar .search-hint {
+  font-size: 28rpx;
+  position: absolute;
+  right: 30rpx;
+  top: 32rpx;
+}
+
+.search-bar .search-box .search-img {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 10rpx;
+}
+
+/* 左侧菜单栏 */
+
+.leftmenu {
+  width: 200rpx;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #f5f6f7;
+  overflow: scroll;
+  z-index: 2;
+}
+
+.menu-item {
+  line-height: 90rpx;
+  height: 90rpx;
+  text-align: center;
+  border-bottom: 2rpx silid #e3e3e3;
+  position: relative;
+  color: #777;
+  font-size: 28rpx;
+}
+
+.menu-item.active {
+  color: #eb2444;
+  font-size: 28rpx;
+  font-weight: bold;
+  position: relative;
+  background: #fff;
+}
+
+.menu-item.active:before {
+  position: absolute;
+  left: 0;
+  content: "";
+  width: 8rpx;
+  height: 32rpx;
+  top: 29rpx;
+  background: #eb2444;
+}
+
+.menu-item text.tips-num {
+  position: absolute;
+  top: 20rpx;
+  right: 15rpx;
+  border-radius: 15rpx;
+  width: 30rpx;
+  height: 30rpx;
+  background: red;
+  color: #fff;
+  font-size: 25rpx;
+  line-height: 30rpx;
+}
+
+
+
+/* 右侧商品栏 */
+
+.rightcontent {
+  /* width: 550rpx;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  z-index: 1; */
+  height: 100%;
+  width: 600rpx;
+  display:flex; 
+  flex-wrap: wrap;
+}
+
+
+.scrollItem {
+  width: 40%;
+  height: 260rpx;
+  margin: 20rpx;
+  position:relative
+}
+
+.scrollItem image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+
+.scrollItem text {
+  width: 200rpx;
+  font-size: 24rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-align: center;
+}

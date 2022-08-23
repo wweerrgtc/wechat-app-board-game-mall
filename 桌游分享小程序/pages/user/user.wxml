@@ -1,0 +1,68 @@
+<!--pages/user/user.wxml-->
+<view class='container'>
+  <!-- 用户信息 -->
+  <view wx:if="{{isLogin}}" class='userinfo'>
+    <view class='userinfo-avatar'>
+      <image src="https://tvax2.sinaimg.cn/large/005WJM5Tgy1h5grjz48o8j30dw0dwq3y.jpg"></image>
+    </view>
+    <view class='userinfo-name'>
+      {{userinfo.username}}
+    </view>
+  </view>
+  <view wx:else="" class='userinfo'>
+    <button type="default" class="loginbtn" bindtap="toLogin">点击登录</button>
+  </view>
+  <!-- end 用户信息 -->
+
+  <view class='list-cont'>
+
+
+    <view class="prod-col">
+      <view class="col-item" bindtap='toWishList'>
+        <view class="num">{{wishListCount}}</view>
+        <view class="tit">心愿单</view>
+      </view>
+      <view class="col-item">
+        <view class="num">{{userinfo?userinfo.contribution:0}}</view>
+        <view class="tit">贡献值</view>
+      </view>
+      <view class="col-item" bindtap='toShareList'>
+        <view class="num">{{userinfo?shareNum:0}}</view>
+        <view class="tit">共享历史</view>
+      </view>
+    </view>
+
+    <view class='my-menu'>
+      <view class='memu-item' bindtap='toOrderList'>
+        <view class="i-name">
+          <image src='../../images/icon/promotion.png'></image>
+          <text>我的订单</text>
+        </view>
+        <view class='arrowhead'></view>
+      </view>
+      <view class='memu-item' bindtap='toShare'>
+        <view class="i-name">
+          <image src='../../images/icon/getCoupon.png'></image>
+          <text>共享桌游</text>
+        </view>
+        <view class='arrowhead'></view>
+      </view>
+      <view class='memu-item' bindtap='toWallet'>
+        <view class="i-name">
+          <image src='../../images/icon/myCoupon.png'></image>
+          <text>我的钱包</text>
+        </view>
+        <view class='arrowhead'></view>
+      </view>
+      <view class='memu-item' bindtap='toMyAddress'>
+        <view class="i-name">
+          <image src='../../images/icon/myAddr.png'></image>
+          <text>收货地址</text>
+        </view>
+        <view class='arrowhead'></view>
+      </view>
+    </view>
+    <!--end 列表项 -->
+  </view>
+
+</view>

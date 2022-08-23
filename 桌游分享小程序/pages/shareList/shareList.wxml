@@ -1,0 +1,13 @@
+<view class='container'>
+  
+  <view class="main">
+    <scroll-view scroll-y="true" enable-flex class='rightcontent'>
+      <view class="scrollItem" wx:for="{{productList}}" wx:key="gid" >
+        <image bindtap="toProduct"  id="{{item.gid}}" src="{{item.image}}"></image>
+        <text>{{item.gname}}</text>
+        <button bindtap="delProduct"  id="{{item.gid}}" class="delbtn" size="mini" type="warn">删除</button>
+      </view>
+    </scroll-view>
+  </view>
+
+</view>

@@ -1,0 +1,15 @@
+<view class="form-common">
+    <form bindsubmit="login">
+        <view class="formc-cnt">
+            <text>联系电话:</text>
+            <input bindinput="textinput" value="{{phone}}" id="phone" type="text" />
+        </view>
+        <view class="formc-cnt">
+            <text>邮寄地址: </text>
+            <input bindinput="textinput" value="{{address}}" id="address" type="text" />
+        </view>
+        <view>
+            <button type="primary" bindtap="updateInfo" hover-class="btnhover" formType="submit">提交</button>
+        </view>
+    </form>
+</view>

@@ -1,0 +1,13 @@
+<!--pages/recent-news/recent-news.wxml-->
+<view class='container'>
+  <view class='recent-news'>
+    <view wx:for='{{message}}' wx:key='msgId' id='{{item.msgId}}' bindtap="showContent">
+      <view class='news-item'>
+        <view class='news-item-title'>{{item.title}}</view>
+        <view class='news-item-date'>
+          {{item.time}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

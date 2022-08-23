@@ -1,0 +1,7 @@
+<view class="header">
+    <text>余额: ￥{{wallet}}</text>
+</view>
+
+<view>
+    <button class="recharge" type="primary" bindtap="showModal">充值</button>
+</view>

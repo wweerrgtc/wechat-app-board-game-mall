@@ -1,0 +1,16 @@
+
+  <!-- 排行榜区域 -->
+  <view class="topList">
+    <!-- 内容区 -->
+    <swiper class="toListSwiper" next-margin="100rpx">
+      <swiper-item>
+        <view class="swiperItem" wx:for="{{topList}}" wx:key="gid">
+          <view class="topListItem" id="{{item.gid}}" bindtap="toProduct">
+            <image src="{{item.image}}"></image>
+            <text class="count">{{item.gid}}</text>
+            <text class="itemName">{{item.gname}}</text>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
